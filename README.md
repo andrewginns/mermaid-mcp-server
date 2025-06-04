@@ -8,6 +8,13 @@ Implements a minimal Python wrapper over https://github.com/mermaid-js/mermaid-c
 
 Python MCP server for validating Mermaid diagrams and (optionally) rendering them as PNG images. It uses the Mermaid CLI tool to perform the validation and rendering.
 
+The server provides LLMs with structured validation results including:
+- **Boolean validation status** (`is_valid: true/false`) indicating whether the Mermaid diagram syntax is correct
+- **Detailed error messages** explaining exactly what went wrong if validation fails (e.g., syntax errors, unsupported diagram types, malformed nodes)
+- **Optional base64-encoded PNG images** of successfully rendered diagrams for visual verification
+
+This enables LLMs to programmatically validate Mermaid diagram syntax, understand specific errors to provide helpful corrections, and optionally receive visual confirmation of the rendered output.
+
 Also provides a simple Pydantic-AI MCP Client to invoke the MCP server using a Gemini model for testing.
 
 ## Quickstart
