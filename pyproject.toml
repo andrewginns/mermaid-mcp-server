@@ -1,0 +1,17 @@
+[project]
+name = "mermaid-mcp-server"
+version = "0.1.0"
+description = "MCP server for validating Mermaid diagrams"
+readme = "README.md"
+requires-python = ">=3.12.7"
+dependencies = [
+    "fastapi>=0.115.12",
+    "httpx>=0.28.1",
+    "langchain-mcp>=0.2.1",
+    "langchain-openai>=0.3.19",
+    "mcp[cli]>=1.9.2",
+    "pydantic>=2.11.5",
+    "pydantic-ai-slim[mcp]>=0.2.14",
+    "python-dotenv>=1.1.0",
+    "uvicorn>=0.34.3",
+]
