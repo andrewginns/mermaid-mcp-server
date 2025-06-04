@@ -17,9 +17,31 @@ This enables LLMs to programmatically validate Mermaid diagram syntax, understan
 
 Also provides a simple Pydantic-AI MCP Client to invoke the MCP server using a Gemini model for testing.
 
+## Prerequisites
+
+**Important**: This MCP server requires Node.js to be installed on your system, even if you're only using the server component (not the client). The server internally calls `npx @mermaid-js/mermaid-cli` as a subprocess to perform diagram validation and rendering.
+
+### Required Dependencies
+
+- **Node.js** with npm (required for all usage)
+- **Mermaid CLI**: Install with `npm install -g @mermaid-js/mermaid-cli`
+- **Python** with uv (for running the MCP server)
+
+### Quick Dependency Setup
+
+```bash
+# Install Mermaid CLI globally
+npm install -g @mermaid-js/mermaid-cli
+
+# Verify installation
+npx @mermaid-js/mermaid-cli --version
+```
+
 ## Quickstart
 
 To use this server with an MCP client (like Claude Desktop), add the following configuration to your MCP settings:
+
+**Note**: Make sure you have Node.js and Mermaid CLI installed (see Prerequisites above) before configuring the MCP server.
 
 ### Configuration Format
 
@@ -108,9 +130,7 @@ This repository can be used standalone to test the functionality of the Mermaid 
 
 ## Requirements
 
-- uv for Python and dependency management
-- Node.js with npm
-- Mermaid CLI: `npm install -g @mermaid-js/mermaid-cli`
+See the [Prerequisites](#prerequisites) section above for required dependencies (Node.js, Mermaid CLI, and Python with uv).
 
 ## Quick Setup (Recommended)
 
