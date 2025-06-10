@@ -1,6 +1,6 @@
 [project]
 name = "mermaid-mcp-server"
-version = "0.1.0"
+version = "11.4.2"
 description = "MCP server for validating Mermaid diagrams"
 readme = "README.md"
 requires-python = ">=3.12.7"
